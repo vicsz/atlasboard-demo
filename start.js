@@ -12,7 +12,7 @@ try {
   process.exit();
 }
 
-atlasboard({port: process.env.ATLASBOARD_PORT || 3000, install: true}, function (err) {
+atlasboard({port: process.env.ATLASBOARD_PORT || 8081, install: true}, function (err) {
   if (err) {
     throw err;
   }
