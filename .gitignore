@@ -3,5 +3,6 @@ packages/demo/node_modules/*
 assets/compiled/*
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
+!.elasticbeanstalk/*.config
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
