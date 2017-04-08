@@ -87,6 +87,8 @@ module.exports = {
 
      */
 
+     dependencies.logger.info('Job action being called!!'); // I am a log line!
+
     dependencies.easyRequest.HTML('http://google.com', function (err, html) {
       // logger.trace(html);
       jobCallback(err, {title: config.widgetTitle, html: html});

@@ -1,6 +1,6 @@
 module.exports = {
 
-  "liveLoggingWebAccess": false, // disabled by default for security reasons
+  "liveLoggingWebAccess": true, // disabled by default for security reasons
 
   "morgan": 'dev', // settings for express's logging: https://www.npmjs.com/package/morgan
 
