@@ -89,9 +89,8 @@ module.exports = {
 
      dependencies.logger.info('Job action being called!!'); // I am a log line!
 
-    dependencies.easyRequest.HTML('http://google.com', function (err, html) {
-      // logger.trace(html);
-      jobCallback(err, {title: config.widgetTitle, html: html});
+    dependencies.easyRequest.JSON('https://status.github.com/api/status.json', function (err, json) {
+      jobCallback(err, {title: config.widgetTitle, status: json.status});
     });
   }
 };

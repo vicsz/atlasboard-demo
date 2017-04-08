@@ -16,7 +16,7 @@
   "config": {
       "exampleconfig" : {
         "interval" : 10000,
-        "widgetTitle": "Custom Widget Title"
+        "widgetTitle": "GitHub Health Status"
       }
   }
 }

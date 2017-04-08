@@ -11,6 +11,6 @@ widget = {
       $('h2', el).text(data.title);
     }
 
-    $('.content', el).html(data.text);
+    $('.content', el).html(data.status);
   }
 };
