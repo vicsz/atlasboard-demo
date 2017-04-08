@@ -6,17 +6,17 @@
   "description": "My first wallboard. This will show up in the dashboard list",
 
   "layout": {
-      "gridSize" : { "columns" : 20, "rows" : 12 },
+      "gridSize" : { "columns" : 2, "rows" : 2 },
       "customJS" : [],
       "widgets" : [
-        {"row" : 1, "col" : 1, "width" : 2, "height" : 3, "widget" : "quotes", "job" : "quotes", "config": "quotes"}
+        {"row" : 1, "col" : 1, "width" : 2, "height" : 2, "widget" : "examplewidget", "job" : "examplejob", "config": "exampleconfig"}
       ]
   },
 
   "config": {
-      "quotes" : {
+      "exampleconfig" : {
         "interval" : 10000,
-        "someotherconfig" :  "here"
+        "widgetTitle": "Custom Widget Title"
       }
   }
 }

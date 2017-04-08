@@ -7,3 +7,4 @@ This is the README for my dashboard. Any info I need to pass on to other users w
 2. Create a new widget *atlasboard generate widget exampleWidget*
 3. Create a new job *atlasboard generate job exampleJob*
 4. Create a new dashboard *atlasboard generate dashboard exampleDashboard*
+5. Update the exampledashboard.json to use / point to newly created widget / job.
