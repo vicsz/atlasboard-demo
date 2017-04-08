@@ -14,3 +14,10 @@ This is the README for my dashboard. Any info I need to pass on to other users w
 1. Turn on live logging in config/loggig.js  (liveLoggingWebAccess=true)
 2. Live logging is available at /log
 
+
+## Configuring for AWS Beanstalk Deploys
+
+1. Ensure AWS CLI is installed -- on mac's -- *brew install awscli*
+2. Run *eb init* from the project directory .. select existing nodeJS based Beanstalk instance
+3. To deploy, run: *eb deploy*
+
