@@ -2,6 +2,9 @@ widget = {
   //runs when we receive data from the job
   onData: function (el, data) {
 
-    $('.content', el).html('JIRA CONTENT');
+    if (data.issueCount) {
+      $('.content', el).text(data.issueCount);
+    }
+    
   }
 };
