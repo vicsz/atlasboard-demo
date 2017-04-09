@@ -1,8 +1,4 @@
 {
-    "stash":{
-        "username":"${STASH_USER}",
-        "password":"${STASH_PASSWORD}"
-    },
     "jira":{
         "username":"${JIRA_USER}",
         "password":"${JIRA_PASSWORD}"
