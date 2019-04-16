@@ -39,15 +39,19 @@ For example: /home/pi/startup.sh
 
 Contents: 
 
+```sh
 #! /bin/sh
 # launch the web page of choice 
 sudo -u pi epiphany-browser -a --profile ~/.config http://127.0.0.1/index.html --display=:0 > /dev/null 2>&1 &
 sleep 15s;
 # this does the same job as pressing the F11 key to force Kiosk mode
 xte "key F11" -x:0 &
+```
 
 Add script to auto start 
+```sh
 sudo nano ~/.config/lxsession/LXDE/autostart
+```
 — append the following line
 @/home/pi/startup.sh
 
@@ -56,4 +60,6 @@ Optional -- if dashboard server is hosted on PI also add Application start in th
 ###  Setup Notes - Incorrect Keyboard Settings 
 
 If Default Keyboard is wrong — i.e. incorrect number keys :
-#sudo nano /etc/default/keyboard
+```sh
+sudo nano /etc/default/keyboard
+```
