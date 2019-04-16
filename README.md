@@ -31,7 +31,7 @@ https://bitbucket.org/atlassian/atlasboard
 
 Notes for getting a Raspberry PI configured for "kiosk" mode -- including starting up a browser in fullscreen to point to webbased dashboard of your choice. 
 
-## Raspberry PI Kiosk Mode Setup
+### Raspberry PI Kiosk Mode Setup
 
 Create a startup script:
 ```sh
