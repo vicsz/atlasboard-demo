@@ -32,12 +32,16 @@ https://bitbucket.org/atlassian/atlasboard
 ## Raspberry PI Initial Setup for Kiosk Mode (Dashboard) 
 
 Get to GUI from Prompt
-#startx
+```sh
+startx
+```
 
 Create a startup script:
-For example: /home/pi/startup.sh
+```sh
+nano /home/pi/startup.sh
+```
 
-Contents: 
+Recommend file contents: 
 
 ```sh
 #! /bin/sh
@@ -48,12 +52,14 @@ sleep 15s;
 xte "key F11" -x:0 &
 ```
 
-Add script to auto start 
+Add script to auto start:
 ```sh
 sudo nano ~/.config/lxsession/LXDE/autostart
 ```
-— append the following line
+Append the following line
+```sh
 @/home/pi/startup.sh
+```
 
 Optional -- if dashboard server is hosted on PI also add Application start in the startup script.  To get latest source code updates automatically also add GIT updates, and application build step. 
 
