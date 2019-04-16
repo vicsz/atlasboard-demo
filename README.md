@@ -9,7 +9,7 @@ This is the README for my dashboard. Any info I need to pass on to other users w
 4. Create a new dashboard *atlasboard generate dashboard exampleDashboard*
 5. Update the exampledashboard.json to use / point to newly created widget / job.
 
-## Debugging 
+## Debugging Raspberry PI
 
 1. Turn on live logging in config/loggig.js  (liveLoggingWebAccess=true)
 2. Live logging is available at /log
@@ -21,3 +21,35 @@ This is the README for my dashboard. Any info I need to pass on to other users w
 2. Run *eb init* from the project directory .. select existing nodeJS based Beanstalk instance
 3. To deploy, run: *eb deploy*
 
+
+
+## Raspberry PI Setup Note
+
+## Raspberry PI Initial Setup for Kiosk Mode (Dashboard) 
+
+Get to GUI from Prompt
+#startx
+
+Create a startup script:
+For example: /home/pi/startup.sh
+
+Contents: 
+
+#! /bin/sh
+# launch the web page of choice 
+sudo -u pi epiphany-browser -a --profile ~/.config http://127.0.0.1/index.html --display=:0 > /dev/null 2>&1 &
+sleep 15s;
+# this does the same job as pressing the F11 key to force Kiosk mode
+xte "key F11" -x:0 &
+
+Add script to auto start 
+sudo nano ~/.config/lxsession/LXDE/autostart
+— append the following line
+@/home/pi/startup.sh
+
+Optional -- if dashboard server is hosted on PI also add Application start in the startup script.  To get latest source code updates automatically also add GIT updates, and application build step. 
+
+###  Setup Notes - Incorrect Keyboard Settings 
+
+If Default Keyboard is wrong — i.e. incorrect number keys :
+#sudo nano /etc/default/keyboard
