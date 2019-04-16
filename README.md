@@ -27,7 +27,7 @@ https://bitbucket.org/atlassian/atlasboard
 
 
 
-## Raspberry PI Setup Note
+## Raspberry PI Setup Notes
 
 ## Raspberry PI Initial Setup for Kiosk Mode (Dashboard) 
 
