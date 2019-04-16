@@ -1,5 +1,9 @@
-# atlasboard-demo, my awesome Atlasboard dashboard
-This is the README for my dashboard. Any info I need to pass on to other users will go here.
+# Atlasboard Demo 
+
+Demo app of Atlasboard dashboard framework written in NodeJS including JIRA integration example. 
+
+https://bitbucket.org/atlassian/atlasboard
+
 
 ## Adding Widget / Jobs / Dashboard Steps 
 
