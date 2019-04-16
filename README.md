@@ -29,12 +29,9 @@ https://bitbucket.org/atlassian/atlasboard
 
 ## Raspberry PI Setup Notes
 
-## Raspberry PI Initial Setup for Kiosk Mode (Dashboard) 
+Notes for getting a Raspberry PI configured for "kiosk" mode -- including starting up a browser in fullscreen to point to webbased dashboard of your choice. 
 
-Get to GUI from Prompt
-```sh
-startx
-```
+## Raspberry PI Initial Setup for Kiosk Mode (Dashboard) 
 
 Create a startup script:
 ```sh
@@ -45,7 +42,7 @@ Recommend file contents:
 
 ```sh
 #! /bin/sh
-# launch the web page of choice 
+# launch the web page of choice (note update URL as needed) 
 sudo -u pi epiphany-browser -a --profile ~/.config http://127.0.0.1/index.html --display=:0 > /dev/null 2>&1 &
 sleep 15s;
 # this does the same job as pressing the F11 key to force Kiosk mode
@@ -68,4 +65,10 @@ Optional -- if dashboard server is hosted on PI also add Application start in th
 If Default Keyboard is wrong — i.e. incorrect number keys :
 ```sh
 sudo nano /etc/default/keyboard
+```
+
+###  Setup Notes - Getting to GUI from prompt 
+
+```sh
+startx
 ```
